@@ -70,7 +70,7 @@ def triplet_hard_loss(y_true, y_pred):
     negetive = t.min(negetive,1)[0]
     #positive = K.print_tensor(positive)
     #a1 = t.Tensor([1.2]).to("cuda")
-    x=relu(positive-negetive+0.6)
+    x=relu(positive-negetive+1.2)
     loss = t.mean(x)
     return loss
 
